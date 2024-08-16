@@ -938,10 +938,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chestAim: {fileID: 3653038350863498679}
   aimRig: {fileID: 387102421172533561}
-  lookVector:
-    smoothTime: 0
-    clampMagnitude: 0
-    clamp: 0
+  _camera: {fileID: 8875234688564901221}
 --- !u!114 &642942783930708832
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class AimController : MonoBehaviour
 {
     [SerializeField] private AimConstraint chestAim;
     [SerializeField] private Transform aimRig;
-    [SerializeField] private VectorDampener lookVector; 
+    [SerializeField] private Transform _camera;
 
     public void Aim(InputAction.CallbackContext ctx)
     {
@@ -16,19 +16,13 @@ public class AimController : MonoBehaviour
         aimRig.gameObject.SetActive(val); 
     }
 
-    public void Look(InputAction.CallbackContext ctx) 
-    {
-        lookVector.TargetValue = ctx.ReadValue<Vector2>();
-    }
-
-    private void Update()
-    {
-        lookVector.Update();
-        aimRig.RotateAround(aimRig.position, transform.up, lookVector.CurrentValue.x);
-    }
-
     private void Awake()
     {
         aimRig.gameObject.SetActive(false); 
+    }
+
+    void Update()
+    {
+        transform.rotation = Quaternion.LookRotation(Vector3.ProjectOnPlane(_camera.forward, transform.up).normalized);
     }
 }
