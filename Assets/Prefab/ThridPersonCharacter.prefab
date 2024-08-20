@@ -1233,6 +1233,7 @@ GameObject:
   - component: {fileID: 8319281681422989542}
   - component: {fileID: 3817812709276789185}
   - component: {fileID: 642942783930708832}
+  - component: {fileID: 8920328874849929458}
   m_Layer: 0
   m_Name: MixamoRig
   m_TagString: Untagged
@@ -1399,6 +1400,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8c2fe367-a94b-4101-b776-385774652474
     m_ActionName: 'Main/Aim[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8920328874849929458}
+        m_TargetAssemblyTypeName: FiringControl, Assembly-CSharp
+        m_MethodName: Fire
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ded4e7f3-2d87-4b6a-81ff-810caf1ca64e
+    m_ActionName: 'Main/Fire[/Mouse/leftButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Main
@@ -1457,6 +1474,18 @@ MonoBehaviour:
   lookRig: {fileID: 7417714168383134328}
   sensitivity: 1
   _clamp: {x: -35, y: 35}
+--- !u!114 &8920328874849929458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3763342178667406915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c597514613ad71848bc7b3295f4e48e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3933072861773836903
 GameObject:
   m_ObjectHideFlags: 0
